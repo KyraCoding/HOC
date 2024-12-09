@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>My Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        roboto: ['Roboto Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-roboto p-4 h-full w-full">
+    <h1 class="text-4xl ml-10 text-center">My Todo App</h1>
+    <div class="mt-10 flex flex-col items-center">
+        <div class="flex mb-6">
+            <input type="text" id="input" class="bg-gray-600 rounded px-4 py-1 mr-4 text-white"
+                placeholder="Enter your todo list...">
+            <button class="text-white bg-blue-400 hover:bg-blue-600 transition duration-150 rounded p-2"
+                id="add">Add</button>
+        </div>
+        <div id="list" class="w-1/2 rounded-xl bg-gray-600 p-8 gap-4 flex flex-col">
+            <p id="empty" class="text-white text-center mt-4">Your todo list will appear here...</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
